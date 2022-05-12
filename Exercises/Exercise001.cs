@@ -35,7 +35,7 @@ namespace Exercises
 
         public int CountLinuxUsers(List<User> users)
         {
-            int count = users.Where(i => i != null && i.Equals("Linux")).Count();
+            int count = users.Where(i => i != null && i.Type.Equals("Linux")).Count();
 
             return count;
         }

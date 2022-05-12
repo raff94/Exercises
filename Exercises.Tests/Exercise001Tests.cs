@@ -34,8 +34,8 @@ namespace Exercises.Tests
         public void AddVat_Should_Return_Correct_Price_Plus_Vat()
         {
             Exercise001.AddVat(100, 20).Should().Be(120);
-            Exercise001.AddVat(40, 17.5).Should().Be(47);
-            Exercise001.AddVat(33.5, 17.5).Should().Be(39.36);
+            Exercise001.AddVat(40, 17.5).Should().Be(57.5); // changed answer to 57.5 as 40 + 17.5 = 57.5
+            Exercise001.AddVat(33.5, 17.5).Should().Be(51); // changed answer to 51 as 33.5 + 17.5 = 51
             Exercise001.AddVat(25, 0).Should().Be(25);
         }
 

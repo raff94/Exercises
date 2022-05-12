@@ -6,19 +6,19 @@ namespace Exercises
     {
         public static DateTime AddGigaSecond(DateTime dateTime)
         {
+            DateTime result = dateTime;
             var gigaSec = Math.Pow(10, 9);
 
-            if (dateTime.TimeOfDay.TotalSeconds == 0)
+            if (dateTime.TimeOfDay.TotalSeconds == 0) 
             {
                 return dateTime.AddSeconds(gigaSec);
             }
-            else if (dateTime.TimeOfDay.TotalSeconds == 1)
+            else if (dateTime.TimeOfDay.TotalSeconds > 1 && result.AddSeconds(gigaSec).Day < dateTime.Day) 
             {
                 return dateTime.AddSeconds(gigaSec);
             }
             else
             {
-                _ = dateTime > DateTime.Now;
                 return dateTime.AddSeconds(gigaSec);
             }
         }
